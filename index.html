@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Click Order / Reorder</title>
+    <style media="screen">
+      #content{
+        width: 100%;
+        padding: 10px auto;
+      }
+      ul{
+
+      }
+      ul li{
+        border: 1px solid #ddd;
+        display: inline-block;
+        padding: 15px;
+        margin: 0 10px;
+      }
+      ul li .sort_content{
+        text-align: center;
+        margin-top: 10px;
+      }
+      ul li img{
+        height: 230px;
+      }
+    </style>
+  </head>
+  <body>
+      <section id="content">
+        <ul id="ul">
+          <li data-id="1" data-sort="">
+            <img src="assets/images/1.jpg" alt="">
+            <div class="sort_content" style="display:none;">
+              Sıra: <span class="sort_sequence"></span>
+            </div>
+          </li>
+          <li data-id="2" data-sort="">
+            <img src="assets/images/2.jpg" alt="">
+            <div class="sort_content" style="display:none;">
+              Sıra: <span class="sort_sequence"></span>
+            </div>
+          </li>
+          <li data-id="3" data-sort="">
+            <img src="assets/images/3.jpg" alt="">
+            <div class="sort_content" style="display:none;">
+              Sıra: <span class="sort_sequence"></span>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <button type="button" name="sort_submitBtn" id="sort_submitBtn">Sıralamyı Güncelle</button>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script type="text/javascript" src="assets/js/reorder.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+           $('#content ul').ClickReOrder();
+        });
+      </script>
+  </body>
+</html>
